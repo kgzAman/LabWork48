@@ -63,10 +63,10 @@ public class VotingServer extends BasicServer {
         }
     }
 
-//    private void showMain(HttpExchange exchange) {
-//        DataModel dataModel = new DataModel(members);
-//        renderTemplate(exchange,"candidates.ftl",dataModel);
-//    }
+    private void showMain(HttpExchange exchange) {
+        DataModel dataModel = new DataModel(members);
+        renderTemplate(exchange,"candidates.ftl",dataModel);
+    }
 
 //    private void showVote(HttpExchange exchange) {
 //        DataModel dataModel = new DataModel(members);
