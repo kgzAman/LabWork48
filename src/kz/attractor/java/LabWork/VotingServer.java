@@ -34,19 +34,19 @@ public class VotingServer extends BasicServer {
         renderTemplate(exchange,"thankyou.html",dataModel);
     }
 
-//    private void initMembers() throws FileNotFoundException {
-//        Gson gson = new Gson();
-//        JsonReader reader = new JsonReader(new FileReader("data/candidates.json"));
-//
-//       members= Arrays.asList(gson.fromJson(reader,Member[].class));
-//
-//       int id = 0;
-//
-//        for (Member member : members) {
-//            member.setId(id++);
-//            id +=1;
-//        }
-//    }
+    private void initMembers() throws FileNotFoundException {
+        Gson gson = new Gson();
+        JsonReader reader = new JsonReader(new FileReader("data/candidates.json"));
+
+       members= Arrays.asList(gson.fromJson(reader,Member[].class));
+
+       int id = 0;
+
+        for (Member member : members) {
+            member.setId(id++);
+            id +=1;
+        }
+    }
 
     private static Configuration initFreeMarker() {
         try {
